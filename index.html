@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('9022668bb766ba5040341930ae568131');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '이강이의 첫 생일파티에 초대합니다:)',
+        description: '이강이의 소중한 순간에 소중한 분들을 초대합니다.',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyMzA3MDVfMTYz/MDAxNjg4NTEwNTY3MTkw.A3dvOrDP2undb3rYw6IAjN3OFHKpTUvrY1Wum5q86PEg.P2hw_hHK3Tq9cg6py18_xEC0SjNoPYiVSJlMRkbF9A0g.JPEG.tw111ght/%EC%9D%B4%EA%B0%95-%EB%8F%8C%EC%9E%94%EC%B9%98-%EC%B4%88%EB%8C%80%EC%9E%A5-%ED%94%84%EB%A1%9C%ED%95%845.jpg?type=w966',
+        link: {
+          mobileWebUrl: 'https://heureumdesign.creatorlink.net',
+          webUrl: 'https://heureumdesign.creatorlink.net',
+        },
+      },
+      social: {
+        likeCount: 9999, //99999가 최대입니다
+        commentCount: 9999, //99999가 최대입니다
+        sharedCount: 9999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '자세히 보기',
+          link: {
+            mobileWebUrl: 'https://heureumdesign.creatorlink.net',
+            webUrl: 'https://heureumdesign.creatorlink.net',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
